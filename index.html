@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<!--  Jiayi Jiang   SID: 530286965    Unikey: jjia3991
+      Li Wang       SID: 500033368    Unikey: lwan6959
+      Tairan Wang   SID: 530353533    Unikey: twan9284
+      Yujie Liu     SID: 530178648    Unikey: yliu2209
+
+Some of the functional frameworks and styles in this project have been asked from chat gpt.
+ -->
+<head>
+  <title>Responsive Grid Website</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<header>
+  <nav class="grid-nav">
+    <ul>
+      <li class="grid-nav-column1"><a href="#grid-title">Encounter</a></li>
+      <li class="grid-nav-column2"><a href="#grid-intro" onclick="scrollToSection(event, 'grid-intro')">About</a></li>
+      <li class="grid-nav-column2"><a href="#grid-rule" onclick="scrollToSection(event, 'grid-rule')">Rules</a></li>
+      <li class="grid-nav-column2"><a href="#grid-svg">Canvas</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="grid-title" class="grid-section">
+    <h1>Encounter</h1>
+  </section>
+
+  <section id="grid-intro" class="grid-section">
+    <div class="grid-intro-columns">
+      <div class="grid-intro-heading">
+        <h2>About</h2>
+      </div>
+      <div class="grid-intro-paragraph1">
+        <p class="paragraph1">The purpose of this project is to visualise the emergence of social networks between
+          individuals with different personalities. This is inspired by the MBTI personality model, which categorises
+          individuals into 16 personality types. The model suggests that individuals with a particular personality type
+          may be attracted to or repelled by those with another personality. Based on these fundamental laws, they
+          build, expand, and change their social networks and eventually change the trajectory of the entire social
+          environment. </p>
+      </div>
+      <div class="grid-intro-paragraph2">
+        <p class="paragraph2">In this project, four colours of particles represent four personalities, including INFP,
+          ESFJ, ENFJ and INFJ.Particles with different colours follow their own rules. They may attract, repel or chase
+          each other, resulting in an intricate system. Since the MBTI is only an idealised model, real-life
+          relationships are influenced by complex factors. The project may reveal situations contradicting MBTI
+          assumptions, providing insight into the complexities of real-life interpersonal dynamics.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="grid-rule" class="grid-section">
+    <div class="grid-rule-columns">
+      <div class="grid-rule-heading">
+        <h2>Rules</h2>
+      </div>
+      <div class="grid-rule-paragraph">
+        <img src="ruleimage.jpg.png">
+        <h3>Red particles only attracts to those with the same colours.</h3>
+        <h3>Green particles attract to blue particles and themselves.</h3>
+        <h3>Purple particles repel particles of the same colour.</h3>
+        <h3>Blue particles dispel the green ones.</h3>
+
+      </div>
+    
+    </div>
+  </section>
+  <section id="grid-svg" class="grid-section">
+    <div class="grid-svg">
+      <div class="grid-controls">
+        <div class="grid-control-row">
+          <p class="control-label">Current Force</p>
+          <button id="Button2">-</button>
+          <p id="particleBothForce">0.001</p>
+          <button id="Button1">+</button>
+        </div>
+        <div class="grid-control-row">
+          <p class="control-label">1 New Particle Per Millisecond</p>
+          <button id="decreaseFrequency">-</button>
+          <p id="particleFrequency">100</p>
+          <button id="increaseFrequency">+</button>
+        </div>
+      </div>
+      <canvas id="particlesCanvas">
+      </canvas>
+      <p id="screenshotInfo" class = "screenshottext" style="text-align: center;">Press S to take a screenshot</p>
+    </div>
+  </section>
+  <audio id="collisionSound" src="collision.mp3" preload="auto"></audio>
+  <audio id="generationSound" src="generation.mp3" preload="auto"></audio>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"
+    integrity="sha512-jduERlz7En1IUZR54bqzpNI64AbffZWR//KJgF71SJ8D8/liKFZ+s1RxmUmB+bhCnIfzebdZsULwOrbVB5f3nQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="script.js"></script>
+
+
+  </body>
+
+</html>

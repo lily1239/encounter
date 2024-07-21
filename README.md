@@ -1,0 +1,3 @@
+# 9103-project
+9103 particles project
+This interactive platform operates on the premise of human personality typology, employing the Myers-Briggs Type Indicator (MBTI) as its foundational framework to segregate participants into one of sixteen distinct personality categories. Each category is symbolically represented by a unique color, reflecting the intrinsic diversity of human personality traits. This symbolic manifestation further extends to capture the varying levels of attraction and repulsion among different personality types, introducing a dynamic of interpersonal relationships and their influence on the gameplay.

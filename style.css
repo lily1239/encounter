@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Font+Name&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", 'Arial', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url(bgimage.jpg.png);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+header {
+  background-color: black;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+main {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  /* flexible */
+}
+
+img {
+  max-width: 100%;
+  /* images flexible */
+  height: auto;
+  /* aspect ratio */
+}
+
+h1,
+h2,
+h3,
+p {
+  color: white;
+}
+
+h1 {
+  font-family: 'Quicksand', sans-serif;
+  margin-top: 30%;
+  margin-bottom: 5%;
+  font-size: 160px;
+}
+
+h2 {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+
+h3 {
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.grid-intro-paragraph1 p {
+  font-family: 'Futura', serif;
+  font-size: 16px;
+  line-height: 2;
+
+}
+
+.grid-intro-paragraph2 p {
+  font-family: 'Futura', serif;
+  font-size: 16px;
+  line-height: 2;
+}
+
+.grid-nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.grid-nav-column1 {
+  flex: 6;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.grid-nav-column2 {
+  flex: 0.1;
+  text-align: right;
+  padding-right: 15px;
+}
+
+.grid-nav ul li {
+  margin-right: 10px;
+}
+
+.grid-nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.grid-nav ul li a:hover {
+  color: lightgray;
+}
+
+.grid-section {
+  padding: 20px;
+  grid-column: 1 / -1;
+}
+
+.grid-title {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+}
+
+#grid-intro,
+#grid-rule {
+  padding-top: 60px;
+  margin-bottom: 40px;
+}
+
+#grid-svg {
+  padding-top: 80px;
+}
+
+.grid-intro-columns,
+.grid-rule-columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.grid-intro-heading,
+.grid-rule-heading,
+.grid-intro-paragraph1 {
+  flex-basis: 33%;
+}
+
+.grid-intro-paragraph2 {
+  flex-basis: 33%;
+  padding-left: 25px;
+  padding-top: 300px;
+}
+
+.grid-rule-paragraph {
+  flex-basis: 66%;
+}
+
+.grid-controls {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.grid-control-row {
+  display: flex;
+  align-items: center;
+}
+
+.control-label {
+  margin-right: 10px;
+}
+
+
+button {
+  display: inline-block;
+  padding: 10px 10px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#particleBothForce {
+  width: 50px;
+  text-align: center;
+}
+
+#particleFrequency {
+  width: 50px;
+  text-align: center;
+}
+
+/* Add both Forces buttons style */
+#Button1 {
+  background-color: #00CAFF;
+  color: white;
+  border: none;
+  font-size: large;
+}
+
+#Button1:hover {
+  background-color: #0088aa;
+  color: lightgray;
+}
+
+/* decrease both Forces buttons style */
+#Button2 {
+  background-color: #AD28E2;
+  color: white;
+  border: none;
+  font-size: large;
+}
+
+#Button2:hover {
+  background-color: #7a1b9f;
+  color: lightgray;
+}
+
+/* increaseFrequency buttons style */
+#increaseFrequency {
+  background-color: #00CAFF;
+  color: white;
+  border: none;
+  font-size: large;
+}
+
+#increaseFrequency:hover {
+  background-color: #0088aa;
+  color: lightgray;
+}
+
+/* decreaseFrequency buttons style */
+#decreaseFrequency {
+  background-color: #AD28E2;
+  color: white;
+  border: none;
+  font-size: large;
+}
+
+#decreaseFrequency:hover {
+  background-color: #7a1b9f;
+  color: lightgray;
+}
+
+#particlesCanvas {
+  width: 90vw;
+  height: 90vh;
+}
+.screenshottext {
+  font-family: 'Futura', serif;
+  font-size: 20px;
+
+}
+
+/* for desktops and laptops */
+@media only screen and (min-width: 1024px) {
+  h1 {
+    font-size: 180px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .grid-intro-paragraph1 p {
+    font-size: 16px;
+  }
+
+  .grid-intro-paragraph2 p {
+    font-size: 16px;
+  }
+
+  button {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  .grid-section {
+    padding: 30px;
+  }
+
+  .grid-intro-paragraph2 {
+    padding-left: 35px;
+    padding-top: 400px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  #particlesCanvas {
+    width: 90vw;
+    height: 90vh;
+  }
+}
+
+/* for tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 120px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  .grid-intro-paragraph1 p {
+    font-size: 22px;
+  }
+
+  .grid-intro-paragraph2 p {
+    font-size: 22px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .grid-section {
+    padding: 15px;
+  }
+
+  .grid-intro-paragraph2 {
+    padding-left: 30px;
+    padding-top: 250px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  #particlesCanvas {
+    width: 90vw;
+    height: 90vh;
+  }
+}
+
+/* for mobile phones */
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 80px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+
+  .grid-intro-paragraph1 p {
+    font-size: 16px;
+  }
+
+  .grid-intro-paragraph2 p {
+    font-size: 16px;
+  }
+
+  button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .grid-section {
+    padding: 10px;
+  }
+
+  .grid-intro-paragraph2 {
+    padding-left: 10px;
+    padding-top: 200px;
+  }
+
+  /* Adjust the navigation for small screens */
+  .grid-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid-nav ul li {
+    margin-bottom: 10px;
+  }
+
+  /* Adjust the grid layout for small screens */
+  .grid-intro-columns,
+  .grid-rule-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  #particlesCanvas {
+    width: 90vw;
+    height: 90vh;
+  }
+}
+
